@@ -74,4 +74,13 @@ function jogo() {
     while(snake.length>tam){
         snake.shift();
     }
+
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(foodX*grid,foodY*grid,grid,grid);
+
+    if(positionX == foodX&&positionY==foodY){
+        tam++;
+        foodX = Math.floor(Math.random()*grid);
+        foodY = Math.floor(Math.random()*grid);
+    }
 }
