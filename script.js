@@ -47,7 +47,7 @@ function jogo() {
     positionX+=velX;
     positionY+=velY;
 
-    snake.push({ x: positionX, y: positionY })
+    
 
     if(positionX<0){
         positionX=grid;
@@ -69,7 +69,12 @@ function jogo() {
 
     for (let i = 0; i < snake.length; i++) {
         ctx.fillRect(snake[i].x * grid, snake[i].y * grid, grid, grid)
+        if(snake[i].x == positionX && snake[i].y ==positionY){
+            tam=3;
+        }
     }
+
+    snake.push({ x: positionX, y: positionY })
 
     while(snake.length>tam){
         snake.shift();
