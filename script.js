@@ -18,5 +18,14 @@ window.onload = function(){
 function jogo(){
 ctx.fillStyle="#87e68e";
 
-ctx.fillRect()
+snake.push({x:positionX, y:positionY})
+
+ctx.fillRect(0,0,canvas.width, canvas.heigth)
+
+ctx.fillStyle="#fcf112";
+
+for (let index = 0; index < snake.length; index++) {
+    ctx.fillRect(snake[i].x*grid,snake[i].y*grid, grid, grid)
+    
+}
 }
